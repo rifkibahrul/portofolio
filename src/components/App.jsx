@@ -7,6 +7,8 @@ function App() {
             <Navbar />
             <main className="max-w-[1920px] mx-auto overflow-hidden">
                 <Hero />
+                <Hero />
+                <Hero />
             </main>
         </>
     );

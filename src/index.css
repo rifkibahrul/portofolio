@@ -5,27 +5,27 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Epilogue", serif;
-  /* line-height: 1.5;
+    font-family: "Epilogue", serif;
+    /* line-height: 1.5;
   font-weight: 400; */
 
-  /* color-scheme: light dark;
+    /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424; */
 
-  /* font-synthesis: none;
+    /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
 
 body {
-  @apply text-[22px] text-primary;
-  background-color: theme("colors.dark");
+    @apply text-[22px] text-primary;
+    background-color: theme("colors.dark");
 }
 
 a {
-  @apply text-[20px] hover:text-accent transition-all duration-300;
+    @apply text-[20px] hover:text-accent transition-all duration-300;
 }
 
 h1,
@@ -34,36 +34,45 @@ h3,
 h4,
 h5,
 h5 {
-  @apply text-primary;
+    @apply text-primary;
 }
 
 .h1 {
-  @apply text-[64px] leading-none;
+    @apply text-[64px] leading-none;
 }
 
 .h2 {
-  @apply text-[50px] leading-tight;
+    @apply text-[50px] leading-tight;
 }
 
 .h3 {
-  @apply text-[25px];
+    @apply text-[25px];
 }
 
 .btn {
-  @apply h-[75px] px-[30px] transition-all duration-300 text-primary rounded-[18px] flex items-center gap-2;
+    @apply h-[75px] px-[30px] transition-all duration-300 text-primary rounded-[18px] flex items-center gap-2;
 }
 
 .btn-accent {
-  @apply bg-accent hover:bg-primary;
+    @apply bg-accent hover:bg-primary;
 }
 
 .nav-icon {
-  @apply size-8
+    @apply size-8;
 }
 
 .nav-is-open {
-  @apply h-[350px] p-6
+    @apply h-[350px] p-6;
 }
+
+.nav-links {
+    @apply text-lg font-bold duration-300
+}
+
+.nav-links:hover {
+    @apply text-accent
+}
+
 /* a {
   font-weight: 500;
   color: #646cff;
