@@ -1,23 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Epilogue", serif;
+  /* line-height: 1.5;
+  font-weight: 400; */
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
-  font-synthesis: none;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+body {
+  @apply text-[22px] text-primary;
+  background-color: theme("colors.dark");
 }
 
 a {
+  @apply text-[20px] hover:text-accent transition-all duration-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  @apply text-primary;
+}
+
+.h1 {
+  @apply text-[64px] leading-none;
+}
+
+.h2 {
+  @apply text-[50px] leading-tight;
+}
+
+.h3 {
+  @apply text-[25px];
+}
+
+.btn {
+  @apply h-[75px] px-[30px] transition-all duration-300 text-primary rounded-[18px] flex items-center gap-2;
+}
+
+.btn-accent {
+  @apply bg-accent hover:bg-primary;
+}
+
+.nav-icon {
+  @apply size-8
+}
+
+.nav-is-open {
+  @apply h-[350px] p-6
+}
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -69,4 +116,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
