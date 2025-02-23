@@ -1,5 +1,6 @@
 import Navbar from "./navbar/Navbar.jsx";
 import Hero from "./hero/Hero.jsx";
+import About from "./about/About.jsx";
 
 function App() {
     return (
@@ -7,7 +8,7 @@ function App() {
             <Navbar />
             <main className="max-w-[1920px] mx-auto overflow-hidden">
                 <Hero />
-                <Hero />
+                <About />
                 <Hero />
             </main>
         </>
