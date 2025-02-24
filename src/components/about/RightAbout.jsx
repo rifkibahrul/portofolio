@@ -19,7 +19,7 @@ export function RightAbout() {
                 you.
             </p>
             {/* Icons */}
-            <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-row items-center gap-2 justify-end">
                 <a
                     href="https://www.instagram.com/rrifki11"
                     target="_blank"

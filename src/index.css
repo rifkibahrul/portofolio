@@ -81,6 +81,35 @@ h5 {
     @apply w-11 h-11 border border-lighDark hover:bg-accent hover:text-lighDark rounded-full flex justify-center items-center;
 }
 
+.timeline-wrapper {
+    @apply relative py-[22px];
+}
+
+.timeline-wrapper:last-child::before {
+    @apply h-0;
+}
+
+.timeline-wrapper::before {
+    content: "";
+    @apply w-[3px] h-full absolute left-[38px] bg-accent;
+}
+
+.timeline-yr {
+    @apply rounded-full bg-accent absolute w-[75px] h-[75px] text-center flex items-center justify-center;
+}
+
+.timeline-yr span {
+    @apply text-primary text-sm font-bold whitespace-nowrap leading-normal;
+}
+
+.timeline-info {
+    @apply inline-block align-top  max-w-[432px] ml-[6em];
+}
+
+.timeline-info small {
+    @apply text-primary text-base font-bold;
+}
+
 /* a {
   font-weight: 500;
   color: #646cff;
