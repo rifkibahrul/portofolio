@@ -53,7 +53,7 @@ function Skills() {
                                 <div className="p-4 cursor-pointer ">
                                     <img
                                         src={skill.img}
-                                        alt="figma"
+                                        alt={skill.name}
                                         width="100"
                                         className="w-24"
                                     />
