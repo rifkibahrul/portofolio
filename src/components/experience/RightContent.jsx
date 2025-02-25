@@ -1,8 +1,8 @@
 function RightContent() {
     return (
         <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-xl mx-auto mb-12">
-                <h2 className="h2 font-bold mt-8 lg:w-1/2">
+            <div className="max-w-xl mx-auto my-8 lg:mt-0">
+                <h2 className="h2 font-bold text-primary">
                     Education History
                 </h2>
             </div>

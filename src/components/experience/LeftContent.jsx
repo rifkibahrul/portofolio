@@ -3,7 +3,7 @@ function LeftContent() {
         <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-xl mx-auto mb-8">
                 <h2 className="h2 font-bold text-primary">
-                    Professional <span className="">Experience</span>
+                    Experience
                 </h2>
             </div>
 

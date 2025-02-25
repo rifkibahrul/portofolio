@@ -2,6 +2,8 @@ import Navbar from "./navbar/Navbar.jsx";
 import Hero from "./hero/Hero.jsx";
 import About from "./about/About.jsx";
 import Experience from "./experience/Experience.jsx";
+import Skills from "./skill/Skills.jsx";
+import Projects from "./project/Projects.jsx";
 
 function App() {
     return (
@@ -11,7 +13,8 @@ function App() {
                 <Hero />
                 <About />
                 <Experience />
-                <Hero />
+                <Skills />
+                <Projects />
             </main>
         </>
     );
