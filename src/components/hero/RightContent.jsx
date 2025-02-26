@@ -1,4 +1,4 @@
-const RightContent = ({ imgUrl }) => {
+export const RightContent = ({ imgUrl }) => {
     return (
         <div className="hero__img w-full self-end px-4 lg:w-1/2">
             <div className="relative mt-10">
@@ -28,5 +28,3 @@ const RightContent = ({ imgUrl }) => {
         </div>
     );
 };
-
-export default RightContent

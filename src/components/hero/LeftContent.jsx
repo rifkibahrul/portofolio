@@ -1,4 +1,4 @@
-const LeftContent = ({ name }) => {
+export const LeftContent = ({ name }) => {
     return (
         <div className="w-full self-center px-4 lg:w-1/2">
             {/* Text */}
@@ -24,5 +24,3 @@ const LeftContent = ({ name }) => {
         </div>
     );
 };
-
-export default LeftContent

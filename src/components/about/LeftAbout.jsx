@@ -1,4 +1,4 @@
-export function LeftAbout() {
+export const LeftAbout = () =>  {
     return (
         <div className="about__left w-full px-4 mb-10 lg:w-1/2">
             {/* Header */}

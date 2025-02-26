@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { RiMenu4Fill, RiCloseLargeLine } from "@remixicon/react";
 
-function Navbar() {
+const Navbar = () => {
     /**
      * ! Note
      * * isOpen untuk menyimpan nilai state (false / true)

@@ -1,7 +1,7 @@
 import { RightAbout } from "./RightAbout";
 import { LeftAbout } from "./LeftAbout";
 
-function About() {
+const About = () => {
     return (
         <section id="about" className="relative z-20 pt-36">
             <div className="container mx-auto">

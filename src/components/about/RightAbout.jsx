@@ -5,7 +5,7 @@ import {
     RiLinkedinFill,
 } from "@remixicon/react";
 
-export function RightAbout() {
+export const RightAbout = () => {
     return (
         <div className="about__right w-full px-4 lg:w-1/2">
             {/* Header */}

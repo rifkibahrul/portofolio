@@ -1,10 +1,8 @@
-function RightContent() {
+export const RightContent = () => {
     return (
         <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-xl mx-auto my-8 lg:mt-0">
-                <h2 className="h2 font-bold text-primary">
-                    Education History
-                </h2>
+                <h2 className="h2 font-bold text-primary">Education History</h2>
             </div>
 
             {/* Timeline */}
@@ -49,7 +47,7 @@ function RightContent() {
                     <div className="timeline-info">
                         <span className="text-lg font-semibold text-color4">
                             Vocational School Graduate Academy Digital Talent
-                        Scholarship BPSDMP Kominfo Surabaya
+                            Scholarship BPSDMP Kominfo Surabaya
                         </span>
                         <h3 className="font-medium text-sm text-color4 italic opacity-75">
                             Junior Web Developer
@@ -59,6 +57,4 @@ function RightContent() {
             </div>
         </div>
     );
-}
-
-export default RightContent;
+};

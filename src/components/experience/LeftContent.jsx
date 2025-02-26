@@ -1,10 +1,8 @@
-function LeftContent() {
+export const LeftContent = () => {
     return (
         <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-xl mx-auto mb-8">
-                <h2 className="h2 font-bold text-primary">
-                    Experience
-                </h2>
+                <h2 className="h2 font-bold text-primary">Experience</h2>
             </div>
 
             {/* Timeline */}
@@ -74,6 +72,4 @@ function LeftContent() {
             </div>
         </div>
     );
-}
-
-export default LeftContent;
+};
