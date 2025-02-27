@@ -111,6 +111,26 @@ const ProjectSlider = () => {
                         <RiArrowRightLine className="size-6 text-gray-800" />
                     </button>
                 </div>
+                {/* <div className="relative w-full mt-8 flex justify-end gap-4 pr-6">
+                    <button
+                        className={`button-prev w-12 h-12 rounded-full shadow-lg transition-colors flex items-center justify-center ${
+                            isBeginning
+                                ? "bg-gray-400 cursor-not-allowed"
+                                : "bg-white hover:bg-gray-300"
+                        }`}
+                        disabled={isBeginning}
+                    >
+                        <RiArrowLeftLine className="size-6 text-gray-800" />
+                    </button>
+                    <button className={`button-next w-12 h-12 rounded-full shadow-lg transition-colors flex items-center justify-center ${
+                            isEnd
+                                ? "bg-gray-400 cursor-not-allowed"
+                                : "bg-white hover:bg-gray-300"
+                        }`}
+                        disabled={isEnd}>
+                        <RiArrowRightLine className="size-6 text-gray-800" />
+                    </button>
+                </div> */}
             </div>
         </div>
     );
