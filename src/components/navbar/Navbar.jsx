@@ -72,19 +72,19 @@ function NavMenu({ isOpen }) {
                 id="nav-menu"
             >
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#hero">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#">Experience & Education</a>
+                    <a href="#experience">Experience & Education</a>
                 </li>
                 <li>
-                    <a href="#">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="#">Project</a>
+                    <a href="#project">Project</a>
                 </li>
             </ul>
         </div>

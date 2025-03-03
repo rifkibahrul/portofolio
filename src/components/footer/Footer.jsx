@@ -1,13 +1,11 @@
-export const Footer = () => {
+const Footer = () => {
     return (
-        <footer className="bg-lighDark pt-24 pb-12">
-            <div className="container">
-                <div className="text-center">
-                    <p className="text-white text-sm">
-                        Copyright &copy; Made by Rifki.
-                    </p>
-                </div>
-            </div>
+        <footer className="footer mt-[80px] xl:mt-[120px] relative z-20 min-h-fit border-t-2 border-lighDark">
+            <p className="footer__copyright text-center text-lg py-10 border-t-2 border-lighDark">
+                Copyright &copy; Rifki 2025.
+            </p>
         </footer>
     );
 };
+
+export default Footer;

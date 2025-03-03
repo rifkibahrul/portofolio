@@ -2,7 +2,12 @@ export const RightContent = () => {
     return (
         <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-xl mx-auto my-8 lg:mt-0">
-                <h2 className="h2 font-bold text-primary">Education History</h2>
+                <h2 className="h2 font-semibold text-primary">
+                    <span className="relative inline-block">
+                        <span className="relative z-10">Education</span>
+                        <span className="absolute left-0 bottom-[15%] w-full h-[15px] bg-gradient-to-t from-accent to-accent/70 -z-10"></span>
+                    </span>{" "} History
+                </h2>
             </div>
 
             {/* Timeline */}

@@ -17,13 +17,17 @@ function Skills() {
     }, []);
 
     return (
-        <section className="relative z-20 pt-36">
+        <section id="skills" className="relative z-20 pt-36">
             <div className="container">
                 {/* Text */}
                 <div className="w-full px-4">
                     <div className="max-w-xl mx-auto text-center mb-8">
                         <h2 className="skills__text h2 font-bold text-primary">
-                            What I'm Good At
+                            What I'm{" "}
+                            <span className="relative inline-block">
+                                <span className="relative z-10">Good At</span>
+                                <span className="absolute left-0 bottom-[15%] w-full h-[15px] bg-gradient-to-t from-accent to-accent/70 -z-10"></span>
+                            </span>
                         </h2>
                         <p className="skills__text text-primary text-base">
                             The skills, tools and technologies I am really good

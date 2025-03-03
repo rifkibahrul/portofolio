@@ -9,7 +9,7 @@ export const projects = [
         name: "Inflame Store",
         image: Inflame,
         description:
-            "Inflame is an e-commerce project that I created to explore my skills with the goal of learning about e-commerce and web technology. This project allowed me to experiment with different concepts and technologies, and gain valuable experience in creating an effective e-commerce platform.",
+            "Inflame is an e-commerce project that I created to explore my skills with the goal of learning about e-commerce and web technology.",
         technology: "PHP, Laravel, Tailwindcss, Vue JS, Alphine JS, API, MySQL",
         repository: "https://github.com/rifkibahrul/laravel-vue-ecommerce",
         status: "complete",
@@ -20,8 +20,8 @@ export const projects = [
         image: Portofolio,
         description:
             "This personal portfolio website showcases my professional experience and skills as a web developer.",
-        technology: "HTML 5, Tailwind CSS, Javascript",
-        repository: "https://github.com/rifkibahrul/recruitmenDEV",
+        technology: "React JS, Tailwind CSS, Javascript",
+        repository: "https://github.com/rifkibahrul/portofolio",
         status: "uncomplete",
     },
     {
@@ -38,9 +38,9 @@ export const projects = [
         id: 4,
         name: "Siperu",
         image: Siperu,
-        description: "Sistem Peminjaman Ruangan",
+        description: "SIPERU is a web-based room rental platform that facilitates easy and eficient room booking and management, helping to increase room utilization and minimize booking conflict.",
         technology: "HTML 5, Bootstrap, CSS 3, JavaScript, PHP Native, MySQL",
-        repository: "",
+        repository: "https://github.com/farhanmaul987/siperu",
         status: "complete",
     },
 ];
