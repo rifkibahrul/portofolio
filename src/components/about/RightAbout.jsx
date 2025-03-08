@@ -21,13 +21,6 @@ export const RightAbout = () => {
             {/* Icons */}
             <div className="flex flex-row items-center gap-2 justify-end">
                 <a
-                    href="https://www.instagram.com/rrifki11"
-                    target="_blank"
-                    className="border-icons"
-                >
-                    <RiInstagramFill className="about-icons" />
-                </a>
-                <a
                     href="mailto:rifkibahrululum@gmail.com"
                     target="_blank"
                     className="border-icons"
@@ -35,13 +28,13 @@ export const RightAbout = () => {
                     <RiMailFill className="about-icons" />
                 </a>
                 <a
-                    href="https://github.com/Rifki-aw"
+                    href="https://github.com/rifkibahrul"
                     target="_blank"
                     className="border-icons"
                 >
                     <RiGithubFill className="about-icons" />
                 </a>
-                <a href="#" target="_blank" className="border-icons">
+                <a href="https://www.linkedin.com/in/muhammad-rifki-bahrul-ulum/" target="_blank" className="border-icons">
                     <RiLinkedinFill className="about-icons" />
                 </a>
             </div>
