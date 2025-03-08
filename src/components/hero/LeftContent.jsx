@@ -2,7 +2,7 @@ export const LeftContent = ({ name }) => {
     return (
         <div className="w-full self-center px-4 lg:w-1/2">
             {/* Text */}
-            <h1 className="h1 font-semibold text-accent mb-8">
+            <h1 className="h2 font-semibold text-accent mb-8 lg:text-[64px]">
                 Hello! 👋 I`am <span className="text-primary">{name}</span>
             </h1>
 

@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import {
     RiGithubFill,
     RiArrowLeftLine,
@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 const ProjectSlider = () => {
     const [isBeginning, setIsBeginning] = useState(true);
@@ -26,8 +27,9 @@ const ProjectSlider = () => {
         <div className="project__bg bg-lighDark bg-opacity-65 shadow-lg rounded-[70px] min-h-[80vh] flex flex-col justify-center py-12">
             <div className="container p-16 mx-auto">
                 <Swiper
-                    modules={[Navigation, Pagination]}
+                    modules={[Navigation, Pagination, Autoplay]}
                     loop={false}
+                    autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
                     slidesPerView={1}
                     centeredSlides={true}
                     spaceBetween={20}
@@ -91,7 +93,7 @@ const ProjectSlider = () => {
                     ))}
                     <div className="swiper-pagination !relative mt-8"></div>
                 </Swiper>
-                <div className="relative w-full mt-8 flex justify-end gap-4 pr-6">
+                <div className="relative w-full mt-8 flex justify-center gap-4 lg:pr-6 md:justify-end">
                     <button
                         className={`button-prev w-12 h-12 rounded-full shadow-lg transition-colors flex items-center justify-center ${
                             isBeginning
@@ -102,12 +104,14 @@ const ProjectSlider = () => {
                     >
                         <RiArrowLeftLine className="size-6 text-gray-800" />
                     </button>
-                    <button className={`button-next w-12 h-12 rounded-full shadow-lg transition-colors flex items-center justify-center ${
+                    <button
+                        className={`button-next w-12 h-12 rounded-full shadow-lg transition-colors flex items-center justify-center ${
                             isEnd
                                 ? "bg-gray-400 cursor-not-allowed"
                                 : "bg-white hover:bg-gray-300"
                         }`}
-                        disabled={isEnd}>
+                        disabled={isEnd}
+                    >
                         <RiArrowRightLine className="size-6 text-gray-800" />
                     </button>
                 </div>
