@@ -29,7 +29,7 @@ const ProjectSlider = () => {
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     loop={false}
-                    autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
+                    // autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
                     slidesPerView={1}
                     centeredSlides={true}
                     spaceBetween={20}

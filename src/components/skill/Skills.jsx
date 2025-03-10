@@ -38,6 +38,26 @@ function Skills() {
 
                 {/* Tech Skills */}
                 <div className="w-full px-4 flex flex-wrap justify-center">
+                    {skillsData.map((skill) => (
+                        <div
+                            key={skill.id}
+                            className="skills__image p-4 mb-8 md:w-1/7"
+                        >
+                            <h4 className="text-xl font-semibold text-primary text-center">
+                                {skill.name}
+                            </h4>
+                            <div className="p-4 cursor-pointer ">
+                                <img
+                                    src={skill.img}
+                                    alt={skill.name}
+                                    width="100"
+                                    className="w-24"
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {/* <div className="w-full px-4 flex flex-wrap justify-center">
                     <Marquee
                         autoFill
                         pauseOnClick
@@ -65,7 +85,7 @@ function Skills() {
                             </div>
                         ))}
                     </Marquee>
-                </div>
+                </div> */}
             </div>
         </section>
     );

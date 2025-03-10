@@ -7,7 +7,8 @@ import Laravel from "../../../assets/svgs/laravel.svg";
 import Javascript from "../../../assets/svgs/icons8-javascript.svg";
 import MySql from "../../../assets/svgs/mysql.svg";
 import Python from "../../../assets/svgs/python.svg";
-import Git from "../../../assets/svgs/git.svg";
+// import Git from "../../../assets/svgs/git.svg";
+import Figma from "../../../assets/svgs/figma.svg";
 
 export const skillsData = [
     {
@@ -22,8 +23,8 @@ export const skillsData = [
     },
     {
         id: 3,
-        name: "Git",
-        img: Git,
+        name: "Figma",
+        img: Figma,
     },
     {
         id: 4,

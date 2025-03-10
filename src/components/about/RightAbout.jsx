@@ -13,13 +13,13 @@ export const RightAbout = () => {
                 Find Me On
             </h3>
             {/* Description */}
-            <p className="text-base text-primary font-light max-w-xl mb-6">
+            <p className="text-base text-primary font-light mb-6">
                 You can connect with me on various social media and professional
                 platforms, i'm excited to share my experiences and projects with
                 you.
             </p>
             {/* Icons */}
-            <div className="flex flex-row items-center gap-2 justify-end">
+            <div className="flex flex-row items-center gap-2 justify-start">
                 <a
                     href="mailto:rifkibahrululum@gmail.com"
                     target="_blank"
