@@ -103,7 +103,7 @@ h5 {
 }
 
 .timeline-info {
-    @apply inline-block align-top  max-w-[432px] ml-[6em];
+    @apply inline-block align-top ml-[4em] md:ml-[6em];
 }
 
 .timeline-info small {

@@ -24,7 +24,7 @@ const ProjectSlider = () => {
     };
 
     return (
-        <div className="project__bg bg-lighDark bg-opacity-65 shadow-lg rounded-[70px] min-h-[80vh] flex flex-col justify-center py-12">
+        <div className="project__bg bg-lighDark bg-opacity-65 shadow-lg rounded-[70px] flex flex-col justify-center py-12">
             <div className="container p-16 mx-auto">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}

@@ -29,7 +29,7 @@ function Skills() {
                                 <span className="absolute left-0 bottom-[15%] w-full h-[15px] bg-gradient-to-t from-accent to-accent/70 -z-10"></span>
                             </span>
                         </h2>
-                        <p className="skills__text text-primary text-base">
+                        <p className="skills__text text-primary text-base mt-3 lg:mt-5">
                             The skills, tools and technologies I am really good
                             at:
                         </p>
@@ -37,7 +37,7 @@ function Skills() {
                 </div>
 
                 {/* Tech Skills */}
-                <div className="w-full px-4 flex flex-wrap justify-center">
+                {/* <div className="w-full px-4 flex flex-wrap justify-center">
                     {skillsData.map((skill) => (
                         <div
                             key={skill.id}
@@ -56,8 +56,8 @@ function Skills() {
                             </div>
                         </div>
                     ))}
-                </div>
-                {/* <div className="w-full px-4 flex flex-wrap justify-center">
+                </div> */}
+                <div className="w-full px-4 flex flex-wrap justify-center">
                     <Marquee
                         autoFill
                         pauseOnClick
@@ -85,7 +85,7 @@ function Skills() {
                             </div>
                         ))}
                     </Marquee>
-                </div> */}
+                </div>
             </div>
         </section>
     );

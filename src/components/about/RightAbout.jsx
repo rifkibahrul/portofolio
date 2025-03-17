@@ -3,6 +3,7 @@ import {
     RiMailFill,
     RiGithubFill,
     RiLinkedinFill,
+    RiWhatsappFill
 } from "@remixicon/react";
 
 export const RightAbout = () => {
@@ -19,25 +20,35 @@ export const RightAbout = () => {
                 you.
             </p>
             {/* Icons */}
-            <div className="flex flex-row items-center gap-2 justify-start">
-                <a
-                    href="mailto:rifkibahrululum@gmail.com"
-                    target="_blank"
-                    className="border-icons"
-                >
-                    <RiMailFill className="about-icons" />
-                </a>
-                <a
-                    href="https://github.com/rifkibahrul"
-                    target="_blank"
-                    className="border-icons"
-                >
-                    <RiGithubFill className="about-icons" />
-                </a>
-                <a href="https://www.linkedin.com/in/muhammad-rifki-bahrul-ulum/" target="_blank" className="border-icons">
-                    <RiLinkedinFill className="about-icons" />
-                </a>
+            <div className="flex flex-row items-start gap-2 justify-start">
+                <div className="items-center">
+                    <a
+                        href="mailto:rifkibahrululum@gmail.com"
+                        target="_blank"
+                        className="border-icons"
+                    >
+                        <RiMailFill className="about-icons" />
+                    </a>
+                </div>
+                <div className="flex flex-row items-center">
+                    <a
+                        href="https://github.com/rifkibahrul"
+                        target="_blank"
+                        className="border-icons"
+                    >
+                        <RiGithubFill className="about-icons" />
+                    </a>
+                </div>
+                <div className="flex flex-row items-center">
+                    <a
+                        href="https://www.linkedin.com/in/muhammad-rifki-bahrul-ulum/"
+                        target="_blank"
+                        className="border-icons"
+                    >
+                        <RiLinkedinFill className="about-icons" />
+                    </a>
+                </div>
             </div>
         </div>
     );
-}
+};
