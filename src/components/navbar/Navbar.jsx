@@ -69,7 +69,7 @@ function NavMenu({ isOpen, isDesktop }) {
             {(isOpen || isDesktop) && (
                 <motion.ul
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
+                    animate={isDesktop ? { opacity: 1, height: "auto" } : { opacity: 1, height: "350px" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
                     className={`fixed w-full overflow-hidden top-[80px] left-0 right-0 flex flex-col gap-7 transition ease-linear duration-300 ${
@@ -81,9 +81,9 @@ function NavMenu({ isOpen, isDesktop }) {
                 >
                     {navItems.map((item, index) => (
                         <motion.li
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.2, delay: index * 0.1 }}
+                            initial={ isDesktop ? { y:-20, opacity: 0 } : {x: -100, opacity: 0}}
+                            animate={isDesktop ? { y:0, opacity: 1 } : {x: 0, opacity: 1}}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
                             key={index}
                         >
                             <a href={item.link}>{item.name}</a>
