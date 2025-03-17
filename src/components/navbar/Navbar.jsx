@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { RiMenu4Fill, RiCloseLargeLine } from "@remixicon/react";
-import { NavLink } from "react-router-dom";
+import { navItems } from "./component/navItems.js";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
     /**
@@ -10,12 +11,17 @@ const Navbar = () => {
      */
     const [isOpen, setIsOpen] = useState(false); // Navbar toogle
     const [isFixed, setIsFixed] = useState(false); // Navbar fixed scroll
+    const [isDesktop, setIsDesktop] = useState(window.matchMedia("(min-width: 1024px)").matches);
 
     useEffect(() => {
         // Menutup menu ketika dilayar besar
         const handleResize = () => {
-            if (window.matchMedia("(min-width: 1024px)").matches)
+            if (window.matchMedia("(min-width: 1024px)").matches) {
+                setIsDesktop(true);
                 setIsOpen(false);
+            } else {
+                setIsDesktop(false);
+            }
         };
 
         // Navbar fixed saat scroll
@@ -50,45 +56,42 @@ const Navbar = () => {
                     <NavToogle isOpen={isOpen} setIsOpen={setIsOpen} />
 
                     {/* Komponen Menu Navigasi */}
-                    <NavMenu isOpen={isOpen} />
+                    <NavMenu isOpen={isOpen} isDesktop={isDesktop} />
                 </nav>
             </div>
         </header>
     );
-}
+};
 
-function NavMenu({ isOpen }) {
+function NavMenu({ isOpen, isDesktop }) {
     return (
-        <div>
-            <ul
-                className={`
-        fixed w-full overflow-hidden top-[80px] left-0 right-0 flex flex-col gap-7 transition ease-linear duration-300
-        ${
-            isOpen
-                ? "h-[350px] p-6 bg-lighDark/80 backdrop-blur-sm"
-                : "h-0 p-0 border-none"
-        }
-        lg:relative lg:flex-row lg:p-0 lg:top-0 lg:h-full
-    `}
-                id="nav-menu"
-            >
-                <li>
-                    <a href="#hero">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#experience">Experience & Education</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#project">Project</a>
-                </li>
-            </ul>
-        </div>
+        <AnimatePresence>
+            {(isOpen || isDesktop) && (
+                <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.5, type: "spring" }}
+                    className={`fixed w-full overflow-hidden top-[80px] left-0 right-0 flex flex-col gap-7 transition ease-linear duration-300 ${
+                        isOpen
+                            ? "h-[350px] p-6 bg-lighDark/80 backdrop-blur-sm items-end"
+                            : "h-0 p-0 border-none"
+                    } lg:relative lg:flex-row lg:p-0 lg:top-0 lg:h-full`}
+                    id="nav-menu"
+                >
+                    {navItems.map((item, index) => (
+                        <motion.li
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.2, delay: index * 0.1 }}
+                            key={index}
+                        >
+                            <a href={item.link}>{item.name}</a>
+                        </motion.li>
+                    ))}
+                </motion.ul>
+            )}
+        </AnimatePresence>
     );
 }
 

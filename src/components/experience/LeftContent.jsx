@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { experiences } from "./component/data-experience.js";
 
 export const LeftContent = () => {
     return (
@@ -26,68 +27,31 @@ export const LeftContent = () => {
 
             {/* Timeline */}
             <div className="timeline my-10 lg:my-0 md:p-10">
-                <div className="experience__experience timeline-wrapper">
-                    <div className="timeline-yr">
-                        <span>2023</span>
-                    </div>
-                    <div className="timeline-info">
-                        <span className="text-lg lg:text-xl font-semibold text-primary">
-                            Badan Pemeriksa Keuangan Perwakilan Provinsi Jawa
-                            Timur
-                        </span>
-                        <h3 className="font-medium text-sm lg:text-base text-primary italic opacity-75">
-                            Web Developer Intern
-                        </h3>
-                        <p className="my-4 text-sm lg:text-base text-justify font-light text-primary">
-                            Responsible for building web applications to create
-                            a seamless room reservation process. Coordinating
-                            with other teams to analyze the system requirements
-                            to create an effective room reservation process.
-                        </p>
-                        <div className="flex flex-wrap gap-2 text-sm mt-3">
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                HTML
-                            </div>
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                PHP
-                            </div>
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                CSS
-                            </div>
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                Bootstrap
-                            </div>
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                MySql
+                {experiences.map((experience) => (
+                    <div className="experience__experience timeline-wrapper" key={experience.id}>
+                        <div className="timeline-yr">
+                            <span>{experience.year}</span>
+                        </div>
+                        <div className="timeline-info">
+                            <span className="text-lg lg:text-xl font-semibold text-primary">
+                                {experience.name}
+                            </span>
+                            <h3 className="font-medium text-sm lg:text-base text-accent opacity-75 mt-1">
+                                {experience.job}
+                            </h3>
+                            <p className="my-4 text-sm lg:text-base text-justify text-primary">
+                                {experience.description}
+                            </p>
+                            <div className="flex flex-wrap gap-2 text-sm mt-3">
+                                {Array.isArray(experience.technology) && experience.technology.map((tech) => (
+                                    <div key={tech} className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
+                                        {tech}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="experience__experience timeline-wrapper">
-                    <div className="timeline-yr">
-                        <span>2022</span>
-                    </div>
-
-                    <div className="timeline-info">
-                        <span className="text-lg font-semibold text-primary">
-                            MATCHING FUND IOS PARK CV. WASTU KENCANA TEKNIK
-                        </span>
-                        <h3 className="font-medium text-sm text-primary italic opacity-75 mt-1 mb-1">
-                            Machine Learning Intern
-                        </h3>
-                        <p className="my-4 text-sm lg:text-base text-justify font-light text-primary">
-                            Studying and smulating an automatic gate control system that enables to open and close based on vehicle recognition. Developing an Intelligent Parking System with a Parking Quota Calculation feature that leverages CCTV data to optimize parking management. 
-                        </p>
-                        <div className="flex flex-wrap gap-2 text-sm mt-3">
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                Python
-                            </div>
-                            <div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-                                Pandas
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

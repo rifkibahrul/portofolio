@@ -62,22 +62,31 @@ const ProjectSlider = () => {
                                         <p className="w-full text-base text-primary opacity-95">
                                             {project.description}
                                         </p>
-                                        <p className="flex flex-wrap gap-4 text-lg font-bold text-accent">
-                                            {project.technology}
-                                        </p>
+                                        <div className="flex flex-wrap gap-2 text-sm mt-3">
+                                            {Array.isArray(project.technology) && project.technology.map((tech) => (
+                                                <div
+                                                    key={tech}
+                                                    className="bg-gray-300 text-black px-2 py-1 rounded-2xl"
+                                                >
+                                                    {tech}
+                                                </div>
+                                            ))}
+                                        </div>
                                         {/* Border */}
                                         <div className="border border-white/20"></div>
                                         {/* GitHub Link */}
-                                        <div className="group">
-                                            <a
-                                                href={project.repository}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="relative inline-block"
-                                            >
-                                                <RiGithubFill className="size-12" />
-                                            </a>
-                                        </div>
+                                        {project.repository && (
+                                            <div className="group">
+                                                <a
+                                                    href={project.repository}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="relative inline-block"
+                                                >
+                                                    <RiGithubFill className="size-12" />
+                                                </a>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                                 {/* Project Image */}

@@ -7,7 +7,6 @@ const Experience = () => {
             <div className="container mx-auto">
                     <LeftContent />
                 {/* <div className="flex flex-wrap flex-col lg:flex-row"> */}
-                {/* <div className="flex flex-wrap flex-col lg:flex-row"> */}
                     {/* Left Content */}
 
                     {/* Right Content */}
